@@ -1,0 +1,241 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f6f5f7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* MAIN CONTAINER */
+.container{
+    position:relative;
+    width:900px;
+    max-width:100%;
+    min-height:550px;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 14px 28px rgba(0,0,0,0.25);
+}
+
+/* LEFT FORMS */
+.forms-container{
+    position:absolute;
+    left:0;
+    width:50%;
+    height:100%;
+}
+
+/* FORM BOX */
+.form-container{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    transition:0.6s ease-in-out;
+}
+
+/* LOGIN */
+.sign-in-container{
+    z-index:2;
+}
+
+/* SIGNUP HIDDEN */
+.sign-up-container{
+    opacity:0;
+    z-index:1;
+}
+
+/* SWITCH EFFECT */
+.container.right-panel-active .sign-up-container{
+    opacity:1;
+    z-index:5;
+}
+
+.container.right-panel-active .sign-in-container{
+    opacity:0;
+    z-index:1;
+}
+
+/* FORM DESIGN */
+form{
+    background:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    padding:0 50px;
+    text-align:center;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+/* INPUT BOX */
+.input-box{
+    position:relative;
+    width:100%;
+    margin:10px 0;
+}
+
+.input-box i{
+    position:absolute;
+    left:15px;
+    top:15px;
+    color:#777;
+}
+
+.input-box input{
+    width:100%;
+    padding:12px 12px 12px 40px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    outline:none;
+}
+
+/* BUTTON */
+button{
+    margin-top:15px;
+    padding:12px 45px;
+    border:none;
+    background:#2980b9;
+    color:white;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#1f6690;
+}
+
+/* GHOST BUTTON */
+button.ghost{
+    background:transparent;
+    border:1px solid white;
+}
+
+/* FORGOT PASSWORD */
+.forgot{
+    margin-top:10px;
+    font-size:13px;
+    text-decoration:none;
+    color:#555;
+}
+
+/* SOCIAL */
+.social-text{
+    margin:15px 0;
+}
+
+.social-icons{
+    display:flex;
+    gap:10px;
+}
+
+.social-icons a{
+    width:40px;
+    height:40px;
+    border:1px solid #ccc;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    color:#333;
+}
+
+/* RIGHT SIDE */
+.overlay-container{
+    position:absolute;
+    right:0;
+    width:50%;
+    height:100%;
+}
+
+/* OVERLAY */
+.overlay{
+    background:linear-gradient(120deg,#2980b9,#2c3e50);
+    color:white;
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+/* OVERLAY PANELS */
+.overlay-panel{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 40px;
+}
+
+/* HIDE LEFT PANEL INITIALLY */
+.overlay-left{
+    display:none;
+}
+
+/* SHOW LEFT PANEL AFTER SWITCH */
+.container.right-panel-active .overlay-left{
+    display:flex;
+}
+
+/* HIDE RIGHT PANEL AFTER SWITCH */
+.container.right-panel-active .overlay-right{
+    display:none;
+}
+.signup-text{
+    margin-top:20px;
+    font-size:15px;
+}
+
+.signup-btn{
+    margin-top:10px;
+    border-radius:20px;
+    border:1px solid #2f80b7;
+    background:transparent;
+    color:#2f80b7;
+    padding:10px 40px;
+    cursor:pointer;
+}
+.signup-switch{
+    margin-top:15px;
+    background: transparent;
+    border: 1px solid #2f80b7;
+    color:#2f80b7;
+    border-radius:20px;
+    padding:10px 45px;
+    cursor:pointer;
+}
+
+.signup-text{
+    margin-top:20px;
+    font-size:14px;
+    color:#555;
+}
+
+.signup-link{
+    color:#2f80b7;
+    cursor:pointer;
+    font-weight:bold;
+    margin-left:5px;
+}
+
+.signup-link:hover{
+    text-decoration:underline;
+}
